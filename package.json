@@ -1,0 +1,24 @@
+{
+  "name": "curbcut",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Curbcut - find, fix, and prove web accessibility compliance.",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --no-warnings src/server.js",
+    "dev": "node --no-warnings --watch src/server.js",
+    "test": "RENDER_MODE=static node --no-warnings --test test/*.test.js",
+    "seed": "node --no-warnings scripts/seed.js",
+    "scan": "node --no-warnings scripts/scan-cli.js",
+    "test:browser": "node --no-warnings --test test/render.test.js"
+  },
+  "dependencies": {
+    "parse5": "^8.0.1"
+  },
+  "optionalDependencies": {
+    "playwright": "^1.62.1"
+  }
+}

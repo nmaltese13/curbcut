@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible Store — Home</title>
+  <style>
+    body { background-color: #ffffff; color: #1a1a1a; font-size: 16px; }
+    .skip-link { position: absolute; left: -9999px; }
+    .skip-link:focus { left: 0; }
+    a { color: #0b4f9e; }
+    a:focus { outline: 2px solid #0b4f9e; outline-offset: 2px; }
+    .footer-note { color: #4a4a4a; background-color: #ffffff; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/about">About us</a></li>
+        <li><a href="/contact">Contact us</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/careers">Careers</a></li>
+        <li><a href="/press">Press enquiries</a></li>
+        <li><a href="/support">Support centre</a></li>
+        <li><a href="/legal">Legal notices</a></li>
+        <li><a href="/status">System status</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Our Store</h1>
+    <h2>Featured products</h2>
+
+    <img src="/hero.jpg" alt="A workshop bench with hand tools arranged in a row">
+    <img src="/spacer.png" alt="" role="presentation">
+
+    <p>Everything we sell is built to last, and every product page lists full materials.</p>
+
+    <form action="/subscribe" method="post">
+      <label for="email-field">Email address</label>
+      <input type="email" id="email-field" name="email">
+
+      <label for="name-field">Full name</label>
+      <input type="text" id="name-field" name="name">
+
+      <button type="submit">Subscribe to updates</button>
+      <button type="button" aria-label="Close subscription form">×</button>
+    </form>
+
+    <a href="/deals">View this week's deals</a>
+
+    <table>
+      <caption>Subscription plans</caption>
+      <tr><th scope="col">Plan</th><th scope="col">Price</th></tr>
+      <tr><td>Basic</td><td>$10</td></tr>
+      <tr><td>Pro</td><td>$20</td></tr>
+    </table>
+
+    <ul>
+      <li>Free delivery over $50</li>
+      <li>Thirty day returns</li>
+    </ul>
+
+    <div id="unique-one">First</div>
+    <div id="unique-two">Second</div>
+
+    <div role="checkbox" aria-checked="false" tabindex="0">Send me offers</div>
+
+    <iframe src="https://www.youtube.com/embed/abc123" title="Product demonstration video"></iframe>
+
+    <video src="/promo.mp4" controls>
+      <track kind="captions" src="/promo.vtt" srclang="en" label="English">
+    </video>
+  </main>
+
+  <footer>
+    <nav aria-label="Footer">
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms of service</a>
+    </nav>
+    <p class="footer-note">Copyright 2026 Accessible Store.</p>
+  </footer>
+</body>
+</html>
